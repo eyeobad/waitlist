@@ -1,0 +1,72 @@
+    font-family: 'Inter', sans-serif;
+}
+
+#button-logo-container img {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+}
+
+#submit-button.has-logo #button-logo-container {
+    opacity: 1;
+    width: 24px;
+    margin-right: 8px;
+}
+
+/* Styles for the word rotator */
+#word-rotator {
+    transition: opacity 0.3s ease-in-out;
+    display: inline-block;
+}
+
+/* Update focus styles for the white input */
+#email-input:focus {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+}
+/* Styles for social media icons on success page */
+.social-icon {
+    @apply text-gray-400 hover:text-indigo-600 transition-colors duration-300;
+}
+
+/* 1) Enable stacking and hide overflow */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 2) Star‑field + top‑to‑bottom dark gradient */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    url('../logos/background.jpg') center/cover no-repeat,
+    linear-gradient(
+      to bottom,
+      rgba(14,17,21,0.9) 0%,
+      rgba(16,24,32,0.8) 50%,
+      rgba(0,0,0,0.8) 100%
+    );
+  z-index: 0;
+}
+
+/* 3) Curved horizon at the bottom */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: radial-gradient(
+    ellipse at bottom,
+    #112025 0%,
+    transparent 80%
+  );
+  z-index: 0;
+}
+
+/* 4) Lift your existing card/text above */
+.hero > .relative {
+  z-index: 10;
+}
